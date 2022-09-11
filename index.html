@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page</title>
+    <style>
+      body {
+        user-select: none;
+        background-color: salmon;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+      }
+      input {
+        width: 200px;
+        height: 100px;
+        text-align: center;
+      }
+      button {
+        width: 150px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form id="form" method="post" action="/post">
+        <input type="text" name="username" placeholder="name" />
+        <input type="number" name="age" placeholder="age" />
+        <input type="date" name="birthday" placeholder="birthday" />
+        <input type="submit" />
+      </form>
+    </div>
+    <div>
+      <form method="post" action="/delete">
+        <input type="text" name="delName" placeholder="지울 데이터 이름" />
+        <input type="submit" />
+      </form>
+    </div>
+    <button onclick="location.href='http://localhost:3000/people'">
+      데이터 검색
+    </button>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
